@@ -4,17 +4,46 @@
   <title>WEB - CSS</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script>
+    function nightDayHandler(){
+     if(document.querySelector('#night_day').value ==='night'){
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='powderblue';
+        document.querySelector('#night_day').value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i<alist.length){
+          alist[i].style.color = 'powderblue';
+          i=i+1;
+        }
+        }else{
+          document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        document.querySelector('#night_day').value = 'night';
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i<alist.length){
+          alist[i].style.color = 'blue';
+          i=i+1;
+        }
+      }
+    }  
+  </script>
 </head>
 <body>
   <h1><a href="index.html">손흥민</a></h1>
   <div id="grid">
     <ol>
-      <li><a href="1.html">개요</a></li>
-      <li><a href="2.html">상세</a></li>
-      <li><a href="3.html">생애</a></li>
+      <input type="button" value="개요" onclick="location.href='1.html'">
+      <P><input type="button" value="상세" onclick="location.href='2.html'"></P>
+      <input id="3"type="button" value="생애" onclick= "location.href='3.html'">
     </ol>
     <div id="article">
         <h2></h2>
+        <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler();
+        ">
         <p>
           센추리 클럽에 가입하였다. 그리고 2022년 카타르 월드컵 국가대표팀 주장을 맡아 좋은 리더십을 보여주며 한국축구 역대 3번째이자 원정 2번째로 16강이라는 대기록을 이끌었다.</P>
           <p> 기록으로 봐도 프리미어 리그 득점왕, 발롱도르 후보[44], FIFA FIFPro 월드 XI 55인[45], PFA 올해의 팀 선정[46], 프리미어 리그 이달의 선수 3회 수상[47], 아시아인 최초 유럽 빅리그 100골 돌파, 프리미어 리그와 UEFA 챔피언스 리그 아시아 국적 선수 최다 골·최다 어시스트 등을 달성한, 대한민국을 넘어서 아시아 축구 역사상 최고의 선수로 평가받고 있다.</P>
